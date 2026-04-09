@@ -101,9 +101,9 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Mockup showcase (mobile — below text) */}
-        <div className="lg:hidden mt-12 max-w-xs mx-auto">
-          <MockupShowcase />
+        {/* Mockup showcase (mobile — compact, cropped) */}
+        <div className="lg:hidden mt-12 max-h-52 overflow-hidden rounded-xl mx-auto opacity-80">
+          <MockupShowcase compact />
         </div>
       </div>
 

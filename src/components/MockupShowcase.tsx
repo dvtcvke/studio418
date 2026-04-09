@@ -357,13 +357,27 @@ function SmallMockup({
   );
 }
 
-export default function MockupShowcase() {
+export default function MockupShowcase({ compact = false }: { compact?: boolean }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setMounted(true), 300);
     return () => clearTimeout(timer);
   }, []);
+
+  if (compact) {
+    return (
+      <div
+        className="relative w-full"
+        style={{
+          opacity: mounted ? 1 : 0,
+          transition: "opacity 0.8s ease 0.5s",
+        }}
+      >
+        <CafeMockup className="relative w-full" />
+      </div>
+    );
+  }
 
   return (
     <div
