@@ -5,29 +5,9 @@ export default function CTAFinal() {
   return (
     <section id="contact" className="py-24 bg-[#09090B] bg-grain">
       <div className="max-w-5xl mx-auto px-6">
-        {/* Trust indicators */}
-        <AnimatedSection>
-          <div className="flex flex-wrap justify-center gap-8 sm:gap-12 mb-16 pb-16 border-b border-white/10">
-            <div className="text-center">
-              <p className="text-4xl font-bold text-[#F97316]">48h</p>
-              <p className="text-sm text-zinc-500 mt-1">Délai maquette</p>
-            </div>
-            <div className="w-px bg-white/10 hidden sm:block" />
-            <div className="text-center">
-              <p className="text-4xl font-bold text-[#F97316]">0&nbsp;$</p>
-              <p className="text-sm text-zinc-500 mt-1">Si ça ne plaît pas</p>
-            </div>
-            <div className="w-px bg-white/10 hidden sm:block" />
-            <div className="text-center">
-              <p className="text-4xl font-bold text-[#F97316]">100%</p>
-              <p className="text-sm text-zinc-500 mt-1">Géré pour vous</p>
-            </div>
-          </div>
-        </AnimatedSection>
-
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: copy */}
-          <AnimatedSection delay={100}>
+          <AnimatedSection>
             <span className="text-sm font-semibold text-[#F97316] uppercase tracking-widest">
               Prêt à commencer?
             </span>
@@ -61,7 +41,7 @@ export default function CTAFinal() {
           </AnimatedSection>
 
           {/* Right: form */}
-          <AnimatedSection delay={300}>
+          <AnimatedSection delay={200}>
             <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 sm:p-10">
               <ContactForm />
             </div>
