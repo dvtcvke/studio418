@@ -15,11 +15,6 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center bg-[#09090B] bg-grain bg-mesh overflow-hidden">
       <div className="relative max-w-6xl mx-auto px-6 py-32 w-full">
-        {/* Mockup showcase (mobile — above text, cropped, with overlapping sites) */}
-        <div className="lg:hidden mb-10 max-h-48 overflow-hidden rounded-xl mx-auto max-w-sm">
-          <MockupShowcase />
-        </div>
-
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: copy */}
           <div>
@@ -78,6 +73,17 @@ export default function Hero() {
               site, vous servez vos clients.
             </p>
 
+            {/* Mockup showcase (mobile — just above CTA) */}
+            <div
+              className="lg:hidden mt-8"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transition: "opacity 0.8s ease 0.6s",
+              }}
+            >
+              <MockupShowcase compact />
+            </div>
+
             {/* CTA */}
             <div
               style={{
@@ -89,7 +95,7 @@ export default function Hero() {
             >
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 mt-10 bg-[#F97316] hover:bg-[#EA580C] text-white font-semibold text-lg px-8 py-4 rounded-full transition-all hover:gap-3 shadow-lg shadow-[#F97316]/20"
+                className="inline-flex items-center gap-2 mt-6 lg:mt-10 bg-[#F97316] hover:bg-[#EA580C] text-white font-semibold text-lg px-8 py-4 rounded-full transition-all hover:gap-3 shadow-lg shadow-[#F97316]/20"
               >
                 Voir à quoi ressemblerait votre site
                 <ArrowRight size={20} />

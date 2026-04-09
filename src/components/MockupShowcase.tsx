@@ -368,13 +368,35 @@ export default function MockupShowcase({ compact = false }: { compact?: boolean 
   if (compact) {
     return (
       <div
-        className="relative w-full"
+        className="relative w-full flex justify-center items-center"
         style={{
           opacity: mounted ? 1 : 0,
           transition: "opacity 0.8s ease 0.5s",
+          height: "200px",
         }}
       >
-        <CafeMockup className="relative w-full" />
+        {/* Left — barbershop */}
+        <SmallMockup
+          name="Barbier Cartier"
+          accentColor="#8B5CF6"
+          heroText="Votre style."
+          className="absolute w-[35%] left-0 opacity-50"
+          style={{ transform: "rotate(-6deg) translateY(-8px)" }}
+        />
+
+        {/* Center — café (smaller, in front) */}
+        <div className="relative z-10 w-[50%] glow-orange">
+          <CafeMockup className="w-full" />
+        </div>
+
+        {/* Right — gym */}
+        <SmallMockup
+          name="FitZone QC"
+          accentColor="#10B981"
+          heroText="Vos limites."
+          className="absolute w-[35%] right-0 opacity-50"
+          style={{ transform: "rotate(6deg) translateY(-8px)" }}
+        />
       </div>
     );
   }
