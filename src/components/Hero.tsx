@@ -15,6 +15,11 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center bg-[#09090B] bg-grain bg-mesh overflow-hidden">
       <div className="relative max-w-6xl mx-auto px-6 py-32 w-full">
+        {/* Mockup showcase (mobile — above text, cropped, with overlapping sites) */}
+        <div className="lg:hidden mb-10 max-h-48 overflow-hidden rounded-xl mx-auto max-w-sm">
+          <MockupShowcase />
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: copy */}
           <div>
@@ -99,11 +104,6 @@ export default function Hero() {
           <div className="hidden lg:block">
             <MockupShowcase />
           </div>
-        </div>
-
-        {/* Mockup showcase (mobile — compact, cropped) */}
-        <div className="lg:hidden mt-12 max-h-52 overflow-hidden rounded-xl mx-auto opacity-80">
-          <MockupShowcase compact />
         </div>
       </div>
 
