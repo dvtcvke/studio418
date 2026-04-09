@@ -280,24 +280,10 @@ function CafeMockup({
   );
 }
 
-function SmallMockup({
-  name,
-  accentColor,
-  heroText,
-  className,
-  style,
-}: {
-  name: string;
-  accentColor: string;
-  heroText: string;
-  className?: string;
-  style?: React.CSSProperties;
-}) {
+function BarberMockup() {
   return (
-    <div
-      className={`rounded-xl overflow-hidden shadow-xl border border-white/10 ${className || ""}`}
-      style={style}
-    >
+    <div style={{ fontSize: "6px", lineHeight: 1.3 }}>
+      {/* Browser chrome */}
       <div className="bg-[#1E1E1E] px-3 py-1.5 flex items-center gap-1.5">
         <div className="flex gap-1">
           <span className="w-1.5 h-1.5 rounded-full bg-[#FF5F57]" />
@@ -305,51 +291,90 @@ function SmallMockup({
           <span className="w-1.5 h-1.5 rounded-full bg-[#28C840]" />
         </div>
         <div className="flex-1 mx-2">
-          <div className="bg-[#2D2D2D] rounded px-2 py-0.5 text-[6px] text-zinc-500 text-center">
-            {name.toLowerCase().replace(/\s/g, "")}.ca
+          <div className="bg-[#2D2D2D] rounded h-3" />
+        </div>
+      </div>
+      {/* Site */}
+      <div className="bg-[#1A1625] text-white">
+        {/* Nav */}
+        <div className="px-3 py-1.5 flex items-center justify-between">
+          <span className="text-[#8B5CF6] font-bold" style={{ fontSize: "7px" }}>Barbier Cartier</span>
+          <div className="flex gap-1.5">
+            <div className="w-4 h-0.5 rounded-full bg-zinc-600" />
+            <div className="w-4 h-0.5 rounded-full bg-zinc-600" />
+          </div>
+        </div>
+        {/* Hero with real image */}
+        <div className="relative h-16 overflow-hidden">
+          <img src="/images/mockup/barber.png" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1A1625] via-[#1A1625]/50 to-transparent" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
+            <p className="text-white font-bold drop-shadow" style={{ fontSize: "8px" }}>Votre style,{"\n"}notre art.</p>
+            <span className="mt-1 bg-[#8B5CF6] text-white font-bold rounded-full px-2 py-0.5" style={{ fontSize: "5px" }}>Réserver</span>
+          </div>
+        </div>
+        {/* Services */}
+        <div className="px-3 py-2">
+          <div className="grid grid-cols-2 gap-1">
+            <div className="bg-white/5 rounded p-1.5 text-center">
+              <p className="text-[#8B5CF6] font-bold" style={{ fontSize: "6px" }}>Coupe</p>
+              <p className="text-zinc-500" style={{ fontSize: "5px" }}>35 $</p>
+            </div>
+            <div className="bg-white/5 rounded p-1.5 text-center">
+              <p className="text-[#8B5CF6] font-bold" style={{ fontSize: "6px" }}>Barbe</p>
+              <p className="text-zinc-500" style={{ fontSize: "5px" }}>25 $</p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="bg-[#111] p-3" style={{ fontSize: "6px" }}>
-        <div className="flex items-center justify-between mb-2">
-          <span className="font-bold text-white" style={{ fontSize: "7px" }}>
-            {name}
-          </span>
+    </div>
+  );
+}
+
+function GymMockup() {
+  return (
+    <div style={{ fontSize: "6px", lineHeight: 1.3 }}>
+      {/* Browser chrome */}
+      <div className="bg-[#1E1E1E] px-3 py-1.5 flex items-center gap-1.5">
+        <div className="flex gap-1">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#FF5F57]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#FEBD2F]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#28C840]" />
+        </div>
+        <div className="flex-1 mx-2">
+          <div className="bg-[#2D2D2D] rounded h-3" />
+        </div>
+      </div>
+      {/* Site */}
+      <div className="bg-[#0A1A14] text-white">
+        {/* Nav */}
+        <div className="px-3 py-1.5 flex items-center justify-between">
+          <span className="text-[#10B981] font-bold" style={{ fontSize: "7px" }}>FitZone QC</span>
           <div className="flex gap-1.5">
-            <div className="w-4 h-0.5 rounded-full bg-zinc-700" />
-            <div className="w-4 h-0.5 rounded-full bg-zinc-700" />
+            <div className="w-4 h-0.5 rounded-full bg-zinc-600" />
+            <div className="w-4 h-0.5 rounded-full bg-zinc-600" />
           </div>
         </div>
-        <div
-          className="rounded-md p-3 text-center"
-          style={{
-            background: `linear-gradient(135deg, ${accentColor}, ${accentColor}88)`,
-          }}
-        >
-          <p
-            className="text-white/90 font-bold"
-            style={{ fontSize: "8px" }}
-          >
-            {heroText}
-          </p>
-          <p className="text-white/50 mt-0.5" style={{ fontSize: "5px" }}>
-            Québec · Depuis 2020
-          </p>
-        </div>
-        <div className="grid grid-cols-2 gap-1.5 mt-2">
-          <div className="bg-white/5 rounded p-1.5 text-center">
-            <div
-              className="w-full h-3 rounded mb-1"
-              style={{ backgroundColor: accentColor + "20" }}
-            />
-            <div className="w-8 h-0.5 bg-zinc-700 rounded mx-auto" />
+        {/* Hero with real image */}
+        <div className="relative h-16 overflow-hidden">
+          <img src="/images/mockup/gym.png" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A1A14] via-[#0A1A14]/50 to-transparent" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
+            <p className="text-white font-bold drop-shadow" style={{ fontSize: "8px" }}>Dépassez{"\n"}vos limites.</p>
+            <span className="mt-1 bg-[#10B981] text-white font-bold rounded-full px-2 py-0.5" style={{ fontSize: "5px" }}>S&apos;inscrire</span>
           </div>
-          <div className="bg-white/5 rounded p-1.5 text-center">
-            <div
-              className="w-full h-3 rounded mb-1"
-              style={{ backgroundColor: accentColor + "20" }}
-            />
-            <div className="w-8 h-0.5 bg-zinc-700 rounded mx-auto" />
+        </div>
+        {/* Services */}
+        <div className="px-3 py-2">
+          <div className="grid grid-cols-2 gap-1">
+            <div className="bg-white/5 rounded p-1.5 text-center">
+              <p className="text-[#10B981] font-bold" style={{ fontSize: "6px" }}>Mensuel</p>
+              <p className="text-zinc-500" style={{ fontSize: "5px" }}>49 $/m</p>
+            </div>
+            <div className="bg-white/5 rounded p-1.5 text-center">
+              <p className="text-[#10B981] font-bold" style={{ fontSize: "6px" }}>Cours</p>
+              <p className="text-zinc-500" style={{ fontSize: "5px" }}>15 $/s</p>
+            </div>
           </div>
         </div>
       </div>
@@ -376,27 +401,25 @@ export default function MockupShowcase({ compact = false }: { compact?: boolean 
         }}
       >
         {/* Left — barbershop */}
-        <SmallMockup
-          name="Barbier Cartier"
-          accentColor="#8B5CF6"
-          heroText="Votre style."
-          className="absolute w-[35%] left-0 opacity-50"
+        <div
+          className="absolute w-[38%] left-0 opacity-50 rounded-lg overflow-hidden shadow-xl border border-white/10"
           style={{ transform: "rotate(-6deg) translateY(-8px)" }}
-        />
+        >
+          <BarberMockup />
+        </div>
 
-        {/* Center — café (smaller, in front) */}
-        <div className="relative z-10 w-[50%] glow-orange">
+        {/* Center — café (cropped to hero only) */}
+        <div className="relative z-10 w-[48%] glow-orange rounded-lg overflow-hidden max-h-44">
           <CafeMockup className="w-full" />
         </div>
 
         {/* Right — gym */}
-        <SmallMockup
-          name="FitZone QC"
-          accentColor="#10B981"
-          heroText="Vos limites."
-          className="absolute w-[35%] right-0 opacity-50"
+        <div
+          className="absolute w-[38%] right-0 opacity-50 rounded-lg overflow-hidden shadow-xl border border-white/10"
           style={{ transform: "rotate(6deg) translateY(-8px)" }}
-        />
+        >
+          <GymMockup />
+        </div>
       </div>
     );
   }
@@ -414,22 +437,20 @@ export default function MockupShowcase({ compact = false }: { compact?: boolean 
       <div className="absolute -inset-10 bg-[radial-gradient(ellipse_at_center,_rgba(249,115,22,0.12)_0%,_transparent_70%)] blur-2xl" />
 
       {/* Back mockup — barbershop */}
-      <SmallMockup
-        name="Barbier Cartier"
-        accentColor="#8B5CF6"
-        heroText="Votre style, notre art."
-        className="absolute -top-6 -left-8 w-[55%] opacity-30 blur-[0.5px] animate-float-delayed"
+      <div
+        className="absolute -top-6 -left-8 w-[55%] opacity-30 blur-[0.5px] animate-float-delayed rounded-xl overflow-hidden shadow-xl border border-white/10"
         style={{ transform: "rotate(-8deg)" }}
-      />
+      >
+        <BarberMockup />
+      </div>
 
       {/* Back mockup — gym */}
-      <SmallMockup
-        name="FitZone QC"
-        accentColor="#10B981"
-        heroText="Dépassez vos limites."
-        className="absolute -top-3 -right-6 w-[55%] opacity-35 blur-[0.5px] animate-float-delayed"
+      <div
+        className="absolute -top-3 -right-6 w-[55%] opacity-35 blur-[0.5px] animate-float-delayed rounded-xl overflow-hidden shadow-xl border border-white/10"
         style={{ transform: "rotate(6deg)" }}
-      />
+      >
+        <GymMockup />
+      </div>
 
       {/* Main mockup — full cafe site with real photos */}
       <CafeMockup className="relative w-full glow-orange animate-float" />
