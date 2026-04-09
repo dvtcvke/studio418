@@ -95,10 +95,15 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right: mockup showcase */}
+          {/* Right: mockup showcase (desktop) */}
           <div className="hidden lg:block">
             <MockupShowcase />
           </div>
+        </div>
+
+        {/* Mockup showcase (mobile — below text) */}
+        <div className="lg:hidden mt-12 max-w-xs mx-auto">
+          <MockupShowcase />
         </div>
       </div>
 
