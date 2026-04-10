@@ -281,6 +281,7 @@ function CafeMockup({
 }
 
 function BarberMockup() {
+  // Editorial premium men's lifestyle layout — split asymmetric, vertical service list
   return (
     <div style={{ fontSize: "7px", lineHeight: 1.4 }}>
       {/* Browser chrome */}
@@ -295,117 +296,101 @@ function BarberMockup() {
         </div>
       </div>
 
-      {/* Site */}
-      <div className="bg-[#0F0A1A] text-[#E8DFFF]">
-        {/* Navbar */}
-        <div className="bg-[#1A1230] px-4 py-2 flex items-center justify-between">
+      {/* Site — cream/dark editorial palette */}
+      <div className="bg-[#F5F1EA] text-[#1A1410]">
+        {/* Navbar — minimal serif-style */}
+        <div className="px-5 py-3 flex items-center justify-between border-b border-[#1A1410]/10">
           <div className="flex items-center gap-1">
-            <span className="text-[#A78BFA] font-bold" style={{ fontSize: "9px" }}>Barbier</span>
-            <span className="text-white font-bold" style={{ fontSize: "9px" }}>Cartier</span>
+            <span className="text-[#1A1410] font-bold tracking-tight" style={{ fontSize: "10px", fontFamily: "Georgia, serif" }}>
+              Cartier
+            </span>
+            <span className="text-[#8B6F47]" style={{ fontSize: "5px", letterSpacing: "2px" }}>EST. 2009</span>
           </div>
-          <div className="flex gap-3 text-[#9F8FBF]" style={{ fontSize: "6px" }}>
-            <span>Services</span>
-            <span>À propos</span>
+          <div className="flex gap-3 text-[#1A1410]/60" style={{ fontSize: "6px", letterSpacing: "1px", textTransform: "uppercase" }}>
+            <span>Soins</span>
+            <span>Histoire</span>
             <span>Réserver</span>
-            <span>Contact</span>
           </div>
         </div>
 
-        {/* Hero with real image */}
-        <div className="relative h-28 overflow-hidden">
-          <img src="/images/mockup/barber.png" alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0F0A1A] via-[#0F0A1A]/40 to-transparent" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-            <p className="text-[#A78BFA] font-medium" style={{ fontSize: "5px", letterSpacing: "2px" }}>BARBIER MAÎTRE · QUÉBEC</p>
-            <p className="text-white font-bold mt-0.5 drop-shadow-lg" style={{ fontSize: "12px", lineHeight: 1.2 }}>
-              Votre style,
+        {/* Editorial split hero — image left, big text right */}
+        <div className="grid grid-cols-2 min-h-32">
+          <div className="relative overflow-hidden">
+            <img src="/images/mockup/barber.png" alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="p-4 flex flex-col justify-center bg-[#F5F1EA]">
+            <p className="text-[#8B6F47]" style={{ fontSize: "5px", letterSpacing: "2px" }}>QUÉBEC · DEPUIS 2009</p>
+            <p className="text-[#1A1410] font-bold mt-1 leading-none" style={{ fontSize: "16px", fontFamily: "Georgia, serif", lineHeight: 0.95 }}>
+              L&apos;art du
               <br />
-              notre signature.
+              soin
+              <br />
+              masculin.
             </p>
-            <div className="mt-2 flex gap-2">
-              <span className="bg-[#A78BFA] text-[#0F0A1A] font-bold rounded-full px-3 py-1" style={{ fontSize: "6px" }}>
-                Réserver
-              </span>
-              <span className="border border-white/60 text-white rounded-full px-3 py-1" style={{ fontSize: "6px" }}>
-                Voir nos prix
-              </span>
-            </div>
+            <span className="mt-3 self-start bg-[#1A1410] text-[#F5F1EA] font-bold px-3 py-1.5" style={{ fontSize: "6px", letterSpacing: "1px" }}>
+              RÉSERVER →
+            </span>
           </div>
         </div>
 
-        {/* Trust bar */}
-        <div className="bg-[#1A1230] px-4 py-1.5 flex justify-center gap-6">
-          <div className="text-center">
-            <span className="text-[#A78BFA] font-bold" style={{ fontSize: "8px" }}>4.9</span>
-            <span className="text-[#9F8FBF] ml-0.5" style={{ fontSize: "5px" }}>★★★★★</span>
-          </div>
-          <div className="w-px bg-[#2D2247]" />
-          <div className="text-center text-[#9F8FBF]" style={{ fontSize: "5px" }}>
-            <span className="text-[#A78BFA] font-bold" style={{ fontSize: "8px" }}>850+</span> avis
-          </div>
-          <div className="w-px bg-[#2D2247]" />
-          <div className="text-center text-[#9F8FBF]" style={{ fontSize: "5px" }}>
-            <span className="text-[#A78BFA] font-bold" style={{ fontSize: "8px" }}>15</span> ans
-          </div>
+        {/* Editorial quote */}
+        <div className="px-5 py-3 bg-[#1A1410] text-[#F5F1EA]">
+          <p className="italic text-center" style={{ fontSize: "7px", fontFamily: "Georgia, serif" }}>
+            &laquo; Quinze ans à perfectionner notre métier, un client à la fois. &raquo;
+          </p>
+          <p className="text-center text-[#8B6F47] mt-1" style={{ fontSize: "5px", letterSpacing: "2px" }}>
+            ALEXANDRE CARTIER · MAÎTRE BARBIER
+          </p>
         </div>
 
-        {/* Services section */}
-        <div className="px-4 py-4">
-          <p className="text-[#A78BFA] font-medium text-center" style={{ fontSize: "5px", letterSpacing: "2px" }}>NOS SERVICES</p>
-          <p className="text-white font-bold text-center mt-0.5" style={{ fontSize: "9px" }}>L&apos;art du soin masculin</p>
+        {/* Services — vertical list with prices on right (real menu style) */}
+        <div className="px-5 py-4">
+          <p className="text-[#8B6F47]" style={{ fontSize: "5px", letterSpacing: "2px" }}>NOS PRESTATIONS</p>
+          <p className="text-[#1A1410] font-bold mt-0.5 mb-3" style={{ fontSize: "11px", fontFamily: "Georgia, serif" }}>
+            Le menu
+          </p>
 
-          <div className="grid grid-cols-3 gap-2 mt-3">
-            <div className="bg-[#1A1230] rounded-lg overflow-hidden">
-              <div className="h-10 overflow-hidden">
-                <img src="/images/mockup/haircut.png" alt="" className="w-full h-full object-cover" />
+          {[
+            { name: "Coupe Signature", desc: "Consultation, shampooing, coupe & finition", price: "45 $", img: "haircut" },
+            { name: "Rasage Royal", desc: "Serviette chaude, huiles essentielles, rasoir droit", price: "55 $", img: "razor" },
+            { name: "Soin de Barbe Premium", desc: "Taille précise, huiles premium, baume", price: "35 $", img: "beard" },
+          ].map((s) => (
+            <div key={s.name} className="flex items-center gap-3 py-2 border-b border-[#1A1410]/10">
+              <div className="w-8 h-8 rounded overflow-hidden shrink-0">
+                <img src={`/images/mockup/${s.img}.png`} alt="" className="w-full h-full object-cover" />
               </div>
-              <div className="p-1.5">
-                <p className="font-bold text-white" style={{ fontSize: "6px" }}>Coupe Signature</p>
-                <p className="text-[#9F8FBF]" style={{ fontSize: "5px" }}>Shampooing inclus</p>
-                <p className="text-[#A78BFA] font-bold mt-0.5" style={{ fontSize: "7px" }}>40 $</p>
+              <div className="flex-1 min-w-0">
+                <p className="text-[#1A1410] font-bold" style={{ fontSize: "7px" }}>{s.name}</p>
+                <p className="text-[#1A1410]/50 truncate" style={{ fontSize: "5px" }}>{s.desc}</p>
               </div>
+              <p className="text-[#1A1410] font-bold shrink-0" style={{ fontSize: "9px", fontFamily: "Georgia, serif" }}>{s.price}</p>
             </div>
-            <div className="bg-[#1A1230] rounded-lg overflow-hidden">
-              <div className="h-10 overflow-hidden">
-                <img src="/images/mockup/razor.png" alt="" className="w-full h-full object-cover" />
-              </div>
-              <div className="p-1.5">
-                <p className="font-bold text-white" style={{ fontSize: "6px" }}>Rasage Royal</p>
-                <p className="text-[#9F8FBF]" style={{ fontSize: "5px" }}>Serviette chaude</p>
-                <p className="text-[#A78BFA] font-bold mt-0.5" style={{ fontSize: "7px" }}>35 $</p>
-              </div>
-            </div>
-            <div className="bg-[#1A1230] rounded-lg overflow-hidden">
-              <div className="h-10 overflow-hidden">
-                <img src="/images/mockup/beard.png" alt="" className="w-full h-full object-cover" />
-              </div>
-              <div className="p-1.5">
-                <p className="font-bold text-white" style={{ fontSize: "6px" }}>Soin Barbe</p>
-                <p className="text-[#9F8FBF]" style={{ fontSize: "5px" }}>Huiles premium</p>
-                <p className="text-[#A78BFA] font-bold mt-0.5" style={{ fontSize: "7px" }}>30 $</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
-        {/* CTA Banner */}
-        <div className="mx-4 mb-4 bg-gradient-to-r from-[#1A1230] to-[#2D2247] rounded-lg px-4 py-3 text-center">
-          <p className="text-white font-bold" style={{ fontSize: "8px" }}>Réservez en 30 secondes</p>
-          <p className="text-[#9F8FBF] mt-0.5" style={{ fontSize: "5px" }}>Disponibilité du jour en temps réel</p>
-          <span className="inline-block mt-1.5 bg-[#A78BFA] text-[#0F0A1A] font-bold rounded-full px-4 py-1" style={{ fontSize: "6px" }}>
-            Prendre rendez-vous →
-          </span>
+        {/* Booking widget mockup */}
+        <div className="mx-5 mb-4 border-2 border-[#1A1410] p-3">
+          <p className="text-[#1A1410] font-bold" style={{ fontSize: "7px", letterSpacing: "1px" }}>PROCHAINS CRÉNEAUX</p>
+          <div className="grid grid-cols-4 gap-1 mt-2">
+            {["Auj. 14h", "Auj. 16h", "Dem. 10h", "Dem. 14h"].map((slot) => (
+              <div key={slot} className="bg-[#1A1410] text-[#F5F1EA] text-center py-1" style={{ fontSize: "5px" }}>
+                {slot}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Footer */}
-        <div className="bg-[#1A1230] px-4 py-2 flex justify-between items-center">
-          <div>
-            <p className="text-[#A78BFA] font-bold" style={{ fontSize: "7px" }}>Barbier Cartier</p>
-            <p className="text-[#9F8FBF]" style={{ fontSize: "5px" }}>312 rue Cartier, Québec</p>
-          </div>
-          <div className="text-right text-[#9F8FBF]" style={{ fontSize: "5px" }}>
-            <p>Mar-Ven: 9h-19h</p>
-            <p>Sam: 9h-17h</p>
+        <div className="bg-[#1A1410] text-[#F5F1EA] px-5 py-3">
+          <div className="flex justify-between items-center">
+            <div>
+              <p className="font-bold" style={{ fontSize: "8px", fontFamily: "Georgia, serif" }}>Cartier</p>
+              <p className="text-[#8B6F47] mt-0.5" style={{ fontSize: "5px" }}>312 rue Cartier, Québec</p>
+            </div>
+            <div className="text-right" style={{ fontSize: "5px" }}>
+              <p>Mar-Ven · 9h-19h</p>
+              <p>Sam · 9h-17h</p>
+            </div>
           </div>
         </div>
       </div>
@@ -414,6 +399,7 @@ function BarberMockup() {
 }
 
 function GymMockup() {
+  // Bold magazine-style — full-bleed hero with stats overlay, class schedule grid
   return (
     <div style={{ fontSize: "7px", lineHeight: 1.4 }}>
       {/* Browser chrome */}
@@ -428,117 +414,135 @@ function GymMockup() {
         </div>
       </div>
 
-      {/* Site */}
-      <div className="bg-[#08140F] text-[#D0F5E5]">
-        {/* Navbar */}
-        <div className="bg-[#0E1F18] px-4 py-2 flex items-center justify-between">
+      {/* Site — bold lime/black */}
+      <div className="bg-[#0A0A0A] text-white">
+        {/* Navbar — bold sans */}
+        <div className="px-4 py-2 flex items-center justify-between bg-black">
           <div className="flex items-center gap-1">
-            <span className="text-[#34D399] font-bold" style={{ fontSize: "9px" }}>Fit</span>
-            <span className="text-white font-bold" style={{ fontSize: "9px" }}>Zone QC</span>
+            <span className="bg-[#C7F10F] text-black font-black px-1" style={{ fontSize: "9px", letterSpacing: "-0.5px" }}>FIT</span>
+            <span className="text-white font-black" style={{ fontSize: "9px", letterSpacing: "-0.5px" }}>ZONE</span>
           </div>
-          <div className="flex gap-3 text-[#7FA896]" style={{ fontSize: "6px" }}>
+          <div className="flex gap-3 text-zinc-500" style={{ fontSize: "6px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>
             <span>Cours</span>
+            <span>Coachs</span>
             <span>Tarifs</span>
-            <span>Horaire</span>
-            <span>Essai gratuit</span>
+            <span className="bg-[#C7F10F] text-black px-2 py-0.5">Essai gratuit</span>
           </div>
         </div>
 
-        {/* Hero with real image */}
-        <div className="relative h-28 overflow-hidden">
+        {/* Bold full-bleed hero with stats overlay */}
+        <div className="relative h-36 overflow-hidden">
           <img src="/images/mockup/gym.png" alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#08140F] via-[#08140F]/40 to-transparent" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-            <p className="text-[#34D399] font-medium" style={{ fontSize: "5px", letterSpacing: "2px" }}>SALLE DE SPORT · QUÉBEC</p>
-            <p className="text-white font-bold mt-0.5 drop-shadow-lg" style={{ fontSize: "12px", lineHeight: 1.2 }}>
-              Dépassez
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent" />
+
+          {/* Massive title — overlap left */}
+          <div className="absolute top-3 left-4 max-w-[60%]">
+            <p className="text-[#C7F10F] font-black" style={{ fontSize: "5px", letterSpacing: "2px" }}>QUÉBEC · 24/7</p>
+            <p className="text-white font-black mt-1 leading-[0.85]" style={{ fontSize: "20px", letterSpacing: "-1px" }}>
+              POUSSE
               <br />
-              vos limites.
+              <span className="text-[#C7F10F]">PLUS</span>
+              <br />
+              FORT.
             </p>
-            <div className="mt-2 flex gap-2">
-              <span className="bg-[#34D399] text-[#08140F] font-bold rounded-full px-3 py-1" style={{ fontSize: "6px" }}>
-                Essai gratuit
-              </span>
-              <span className="border border-white/60 text-white rounded-full px-3 py-1" style={{ fontSize: "6px" }}>
-                Voir les cours
-              </span>
+          </div>
+
+          {/* Stats overlay — bottom right */}
+          <div className="absolute bottom-2 right-3 grid grid-cols-2 gap-2">
+            <div className="bg-black/80 backdrop-blur px-2 py-1 border-l-2 border-[#C7F10F]">
+              <p className="text-[#C7F10F] font-black" style={{ fontSize: "10px" }}>2500+</p>
+              <p className="text-zinc-500 uppercase" style={{ fontSize: "4px", letterSpacing: "1px" }}>Membres</p>
+            </div>
+            <div className="bg-black/80 backdrop-blur px-2 py-1 border-l-2 border-[#C7F10F]">
+              <p className="text-[#C7F10F] font-black" style={{ fontSize: "10px" }}>40+</p>
+              <p className="text-zinc-500 uppercase" style={{ fontSize: "4px", letterSpacing: "1px" }}>Cours/sem</p>
             </div>
           </div>
         </div>
 
-        {/* Trust bar */}
-        <div className="bg-[#0E1F18] px-4 py-1.5 flex justify-center gap-6">
-          <div className="text-center">
-            <span className="text-[#34D399] font-bold" style={{ fontSize: "8px" }}>2500+</span>
-            <span className="text-[#7FA896] ml-0.5" style={{ fontSize: "5px" }}>membres</span>
-          </div>
-          <div className="w-px bg-[#1F3329]" />
-          <div className="text-center text-[#7FA896]" style={{ fontSize: "5px" }}>
-            <span className="text-[#34D399] font-bold" style={{ fontSize: "8px" }}>40+</span> cours/sem
-          </div>
-          <div className="w-px bg-[#1F3329]" />
-          <div className="text-center text-[#7FA896]" style={{ fontSize: "5px" }}>
-            <span className="text-[#34D399] font-bold" style={{ fontSize: "8px" }}>24/7</span> accès
-          </div>
+        {/* Marquee-style ticker */}
+        <div className="bg-[#C7F10F] text-black py-1.5 flex justify-around overflow-hidden font-black uppercase" style={{ fontSize: "6px", letterSpacing: "1px" }}>
+          <span>★ MUSCULATION</span>
+          <span>★ HIIT</span>
+          <span>★ YOGA</span>
+          <span>★ CROSSFIT</span>
+          <span>★ BOXE</span>
         </div>
 
-        {/* Services section */}
+        {/* Class schedule grid */}
         <div className="px-4 py-4">
-          <p className="text-[#34D399] font-medium text-center" style={{ fontSize: "5px", letterSpacing: "2px" }}>NOS COURS</p>
-          <p className="text-white font-bold text-center mt-0.5" style={{ fontSize: "9px" }}>Trouvez votre rythme</p>
+          <div className="flex justify-between items-end mb-3">
+            <div>
+              <p className="text-[#C7F10F] font-black uppercase" style={{ fontSize: "5px", letterSpacing: "2px" }}>HORAIRE</p>
+              <p className="text-white font-black uppercase mt-0.5" style={{ fontSize: "11px", letterSpacing: "-0.5px" }}>Cette semaine</p>
+            </div>
+            <span className="text-zinc-500" style={{ fontSize: "5px" }}>Voir tout →</span>
+          </div>
 
-          <div className="grid grid-cols-3 gap-2 mt-3">
-            <div className="bg-[#0E1F18] rounded-lg overflow-hidden">
-              <div className="h-10 overflow-hidden">
-                <img src="/images/mockup/weights.png" alt="" className="w-full h-full object-cover" />
+          <div className="space-y-1.5">
+            {[
+              { day: "LUN", time: "06:00", name: "HIIT Morning", coach: "Marc", spots: "8/12" },
+              { day: "MAR", time: "18:30", name: "Musculation", coach: "Sophie", spots: "10/15" },
+              { day: "MER", time: "07:00", name: "Yoga Flow", coach: "Léa", spots: "5/10" },
+              { day: "JEU", time: "19:00", name: "CrossFit", coach: "Tom", spots: "12/12" },
+            ].map((c, i) => (
+              <div key={i} className="grid grid-cols-[auto_auto_1fr_auto] gap-2 items-center bg-[#141414] border-l-2 border-[#C7F10F] px-2 py-1.5">
+                <span className="text-[#C7F10F] font-black" style={{ fontSize: "7px", letterSpacing: "1px" }}>{c.day}</span>
+                <span className="text-white font-bold" style={{ fontSize: "6px" }}>{c.time}</span>
+                <div>
+                  <p className="text-white font-bold" style={{ fontSize: "6px" }}>{c.name}</p>
+                  <p className="text-zinc-500" style={{ fontSize: "5px" }}>avec {c.coach}</p>
+                </div>
+                <span className={`font-bold px-1.5 py-0.5 ${c.spots === "12/12" ? "bg-red-500/20 text-red-400" : "bg-[#C7F10F]/20 text-[#C7F10F]"}`} style={{ fontSize: "5px" }}>
+                  {c.spots}
+                </span>
               </div>
-              <div className="p-1.5">
-                <p className="font-bold text-white" style={{ fontSize: "6px" }}>Musculation</p>
-                <p className="text-[#7FA896]" style={{ fontSize: "5px" }}>Tous niveaux</p>
-                <p className="text-[#34D399] font-bold mt-0.5" style={{ fontSize: "7px" }}>49 $/m</p>
-              </div>
-            </div>
-            <div className="bg-[#0E1F18] rounded-lg overflow-hidden">
-              <div className="h-10 overflow-hidden">
-                <img src="/images/mockup/cardio.png" alt="" className="w-full h-full object-cover" />
-              </div>
-              <div className="p-1.5">
-                <p className="font-bold text-white" style={{ fontSize: "6px" }}>Cardio HIIT</p>
-                <p className="text-[#7FA896]" style={{ fontSize: "5px" }}>3x / semaine</p>
-                <p className="text-[#34D399] font-bold mt-0.5" style={{ fontSize: "7px" }}>15 $/s</p>
-              </div>
-            </div>
-            <div className="bg-[#0E1F18] rounded-lg overflow-hidden">
-              <div className="h-10 overflow-hidden">
-                <img src="/images/mockup/yoga.png" alt="" className="w-full h-full object-cover" />
-              </div>
-              <div className="p-1.5">
-                <p className="font-bold text-white" style={{ fontSize: "6px" }}>Yoga Flow</p>
-                <p className="text-[#7FA896]" style={{ fontSize: "5px" }}>Studio dédié</p>
-                <p className="text-[#34D399] font-bold mt-0.5" style={{ fontSize: "7px" }}>12 $/s</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* CTA Banner */}
-        <div className="mx-4 mb-4 bg-gradient-to-r from-[#0E1F18] to-[#1F3329] rounded-lg px-4 py-3 text-center">
-          <p className="text-white font-bold" style={{ fontSize: "8px" }}>Première séance offerte</p>
-          <p className="text-[#7FA896] mt-0.5" style={{ fontSize: "5px" }}>Aucun engagement, juste un essai</p>
-          <span className="inline-block mt-1.5 bg-[#34D399] text-[#08140F] font-bold rounded-full px-4 py-1" style={{ fontSize: "6px" }}>
-            Réserver mon essai →
+        {/* Coaches preview */}
+        <div className="px-4 pb-4">
+          <p className="text-[#C7F10F] font-black uppercase mb-2" style={{ fontSize: "5px", letterSpacing: "2px" }}>NOS COACHS</p>
+          <div className="grid grid-cols-3 gap-2">
+            {[
+              { img: "weights", name: "Marc", spec: "Musculation" },
+              { img: "cardio", name: "Sophie", spec: "Cardio" },
+              { img: "yoga", name: "Léa", spec: "Yoga" },
+            ].map((c) => (
+              <div key={c.name} className="bg-[#141414] overflow-hidden">
+                <div className="h-12 overflow-hidden">
+                  <img src={`/images/mockup/${c.img}.png`} alt="" className="w-full h-full object-cover grayscale" />
+                </div>
+                <div className="p-1.5">
+                  <p className="text-white font-black uppercase" style={{ fontSize: "6px" }}>{c.name}</p>
+                  <p className="text-[#C7F10F]" style={{ fontSize: "5px" }}>{c.spec}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bold CTA */}
+        <div className="bg-[#C7F10F] text-black px-4 py-3 flex items-center justify-between">
+          <div>
+            <p className="font-black uppercase" style={{ fontSize: "9px", letterSpacing: "-0.3px" }}>Première séance offerte</p>
+            <p className="font-bold opacity-70" style={{ fontSize: "5px" }}>Aucun engagement</p>
+          </div>
+          <span className="bg-black text-[#C7F10F] font-black uppercase px-3 py-1.5" style={{ fontSize: "7px" }}>
+            JE M&apos;ESSAIE →
           </span>
         </div>
 
         {/* Footer */}
-        <div className="bg-[#0E1F18] px-4 py-2 flex justify-between items-center">
+        <div className="bg-black px-4 py-2 flex justify-between items-center border-t border-[#C7F10F]/20">
           <div>
-            <p className="text-[#34D399] font-bold" style={{ fontSize: "7px" }}>FitZone QC</p>
-            <p className="text-[#7FA896]" style={{ fontSize: "5px" }}>185 boul. Charest, Québec</p>
+            <p className="text-[#C7F10F] font-black uppercase" style={{ fontSize: "7px" }}>FitZone</p>
+            <p className="text-zinc-500" style={{ fontSize: "5px" }}>185 boul. Charest, Québec</p>
           </div>
-          <div className="text-right text-[#7FA896]" style={{ fontSize: "5px" }}>
-            <p>Lun-Ven: 5h-23h</p>
-            <p>Sam-Dim: 7h-21h</p>
+          <div className="text-right text-zinc-500" style={{ fontSize: "5px" }}>
+            <p className="text-[#C7F10F] font-bold">OUVERT 24/7</p>
+            <p>365 jours / an</p>
           </div>
         </div>
       </div>
