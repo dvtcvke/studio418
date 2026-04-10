@@ -393,32 +393,34 @@ export default function MockupShowcase({ compact = false }: { compact?: boolean 
   if (compact) {
     return (
       <div
-        className="relative w-full flex justify-center items-center"
+        className="relative w-full"
         style={{
           opacity: mounted ? 1 : 0,
           transition: "opacity 0.8s ease 0.5s",
-          height: "200px",
+          height: "180px",
         }}
       >
-        {/* Left — barbershop */}
-        <div
-          className="absolute w-[38%] left-0 opacity-50 rounded-lg overflow-hidden shadow-xl border border-white/10"
-          style={{ transform: "rotate(-6deg) translateY(-8px)" }}
-        >
-          <BarberMockup />
-        </div>
+        <div className="absolute left-1/2 top-1/2" style={{ transform: "translate(-50%, -50%) scale(0.42)", width: "420px" }}>
+          {/* Left — barbershop */}
+          <div
+            className="absolute -left-12 top-2 w-[200px] opacity-50 rounded-xl overflow-hidden shadow-xl border border-white/10"
+            style={{ transform: "rotate(-6deg)" }}
+          >
+            <BarberMockup />
+          </div>
 
-        {/* Center — café (cropped to hero only) */}
-        <div className="relative z-10 w-[48%] glow-orange rounded-lg overflow-hidden max-h-44">
-          <CafeMockup className="w-full" />
-        </div>
+          {/* Right — gym */}
+          <div
+            className="absolute -right-12 top-2 w-[200px] opacity-50 rounded-xl overflow-hidden shadow-xl border border-white/10"
+            style={{ transform: "rotate(6deg)" }}
+          >
+            <GymMockup />
+          </div>
 
-        {/* Right — gym */}
-        <div
-          className="absolute w-[38%] right-0 opacity-50 rounded-lg overflow-hidden shadow-xl border border-white/10"
-          style={{ transform: "rotate(6deg) translateY(-8px)" }}
-        >
-          <GymMockup />
+          {/* Center — café (cropped) */}
+          <div className="relative z-10 mx-auto w-[260px] rounded-xl overflow-hidden max-h-72 glow-orange">
+            <CafeMockup className="w-full" />
+          </div>
         </div>
       </div>
     );
