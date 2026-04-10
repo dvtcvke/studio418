@@ -609,10 +609,10 @@ export default function MockupShowcase({ compact = false }: { compact?: boolean 
         style={{
           opacity: mounted ? 1 : 0,
           transition: "opacity 0.8s ease 0.5s",
-          height: "220px",
+          height: "270px",
         }}
       >
-        <div className="absolute inset-0" style={{ transform: "scale(0.62)", transformOrigin: "center center" }}>
+        <div className="absolute inset-0" style={{ transform: "scale(0.78)", transformOrigin: "center center" }}>
           {mockups.map((mockup, i) => {
             const pos = getPosition(i);
             return (
