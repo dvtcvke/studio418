@@ -100,7 +100,7 @@ export default function Hero() {
                 Voir à quoi ressemblerait votre site
                 <ArrowRight size={18} />
               </a>
-              <p className="mt-4 text-sm text-zinc-500">
+              <p className="mt-4 text-sm text-zinc-500 text-center sm:text-left">
                 Gratuit &middot; Sans engagement &middot; Réponse en 48h
               </p>
             </div>

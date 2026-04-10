@@ -76,7 +76,7 @@ export default function Pricing() {
                   Conciergerie & Performance
                 </h3>
               </div>
-              <div className="shrink-0 text-right">
+              <div className="shrink-0 sm:text-right">
                 <p className="text-sm text-[#64748B]">
                   Tout ça pour seulement
                 </p>
