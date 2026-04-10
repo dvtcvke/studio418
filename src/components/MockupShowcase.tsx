@@ -556,12 +556,11 @@ export default function MockupShowcase({ compact = false }: { compact?: boolean 
   }, []);
 
   useEffect(() => {
-    if (!compact) return;
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % 3);
     }, 2800);
     return () => clearInterval(interval);
-  }, [compact]);
+  }, []);
 
   if (compact) {
     // Positions: 0=center, 1=right, 2=left
@@ -634,6 +633,42 @@ export default function MockupShowcase({ compact = false }: { compact?: boolean 
     );
   }
 
+  // Desktop carousel — same logic, bigger sizes
+  const getDesktopPosition = (index: number) => {
+    const pos = (index - active + 3) % 3;
+    if (pos === 0) {
+      // Center — front
+      return {
+        zIndex: 10,
+        transform: "translate(-50%, -50%) scale(1) rotate(0deg)",
+        opacity: 1,
+        filter: "none",
+      };
+    } else if (pos === 1) {
+      // Right — behind
+      return {
+        zIndex: 5,
+        transform: "translate(-15%, -50%) scale(0.78) rotate(6deg)",
+        opacity: 0.4,
+        filter: "blur(1px)",
+      };
+    } else {
+      // Left — behind
+      return {
+        zIndex: 5,
+        transform: "translate(-85%, -50%) scale(0.78) rotate(-6deg)",
+        opacity: 0.4,
+        filter: "blur(1px)",
+      };
+    }
+  };
+
+  const desktopMockups = [
+    { node: <CafeMockup className="w-full" />, glow: true },
+    { node: <BarberMockup />, glow: false },
+    { node: <GymMockup />, glow: false },
+  ];
+
   return (
     <div
       className="relative w-full max-w-md mx-auto lg:mx-0"
@@ -641,29 +676,33 @@ export default function MockupShowcase({ compact = false }: { compact?: boolean 
         opacity: mounted ? 1 : 0,
         transform: mounted ? "translateY(0)" : "translateY(40px)",
         transition: "opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s",
+        height: "440px",
       }}
     >
-      {/* Background glow */}
-      <div className="absolute -inset-10 bg-[radial-gradient(ellipse_at_center,_rgba(249,115,22,0.12)_0%,_transparent_70%)] blur-2xl" />
-
-      {/* Back mockup — barbershop */}
+      {/* Background glow — pulsing with active */}
       <div
-        className="absolute -top-6 -left-8 w-[55%] opacity-30 blur-[0.5px] animate-float-delayed rounded-xl overflow-hidden shadow-xl border border-white/10"
-        style={{ transform: "rotate(-8deg)" }}
-      >
-        <BarberMockup />
-      </div>
+        className="absolute -inset-10 bg-[radial-gradient(ellipse_at_center,_rgba(249,115,22,0.12)_0%,_transparent_70%)] blur-2xl"
+        style={{ transition: "opacity 0.8s ease" }}
+      />
 
-      {/* Back mockup — gym */}
-      <div
-        className="absolute -top-3 -right-6 w-[55%] opacity-35 blur-[0.5px] animate-float-delayed rounded-xl overflow-hidden shadow-xl border border-white/10"
-        style={{ transform: "rotate(6deg)" }}
-      >
-        <GymMockup />
-      </div>
-
-      {/* Main mockup — full cafe site with real photos */}
-      <CafeMockup className="relative w-full glow-orange animate-float" />
+      {desktopMockups.map((m, i) => {
+        const pos = getDesktopPosition(i);
+        const isActive = (i - active + 3) % 3 === 0;
+        return (
+          <div
+            key={i}
+            className={`absolute top-1/2 left-1/2 w-full rounded-xl overflow-hidden shadow-2xl border border-white/10 ${
+              isActive ? "glow-orange" : ""
+            }`}
+            style={{
+              ...pos,
+              transition: "all 0.9s cubic-bezier(0.4, 0, 0.2, 1)",
+            }}
+          >
+            {m.node}
+          </div>
+        );
+      })}
     </div>
   );
 }
