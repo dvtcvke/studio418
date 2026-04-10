@@ -59,30 +59,30 @@ export default function Hero() {
               Sans les maux de tête techniques.
             </p>
 
+            {/* Mockup showcase (mobile — above subtitle) */}
+            <div
+              className="lg:hidden mt-8"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transition: "opacity 0.8s ease 0.5s",
+              }}
+            >
+              <MockupShowcase compact />
+            </div>
+
             {/* Subtitle */}
             <p
-              className="mt-8 text-lg text-zinc-400 max-w-lg leading-relaxed"
+              className="mt-6 lg:mt-8 text-lg text-zinc-400 max-w-lg leading-relaxed"
               style={{
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? "translateY(0)" : "translateY(20px)",
                 transition:
-                  "opacity 0.6s ease 0.5s, transform 0.6s ease 0.5s",
+                  "opacity 0.6s ease 0.6s, transform 0.6s ease 0.6s",
               }}
             >
               Design percutant, optimisé Google, ultra-rapide. On crée votre
               site, vous servez vos clients.
             </p>
-
-            {/* Mockup showcase (mobile — just above CTA) */}
-            <div
-              className="lg:hidden mt-8"
-              style={{
-                opacity: mounted ? 1 : 0,
-                transition: "opacity 0.8s ease 0.6s",
-              }}
-            >
-              <MockupShowcase compact />
-            </div>
 
             {/* CTA */}
             <div
