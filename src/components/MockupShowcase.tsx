@@ -397,28 +397,28 @@ export default function MockupShowcase({ compact = false }: { compact?: boolean 
         style={{
           opacity: mounted ? 1 : 0,
           transition: "opacity 0.8s ease 0.5s",
-          height: "180px",
+          height: "160px",
         }}
       >
-        <div className="absolute left-1/2 top-1/2" style={{ transform: "translate(-50%, -50%) scale(0.42)", width: "420px" }}>
-          {/* Left — barbershop */}
+        <div className="absolute left-1/2 top-1/2" style={{ transform: "translate(-50%, -50%) scale(0.38)", width: "520px" }}>
+          {/* Left — barbershop (landscape crop) */}
           <div
-            className="absolute -left-12 top-2 w-[200px] opacity-50 rounded-xl overflow-hidden shadow-xl border border-white/10"
-            style={{ transform: "rotate(-6deg)" }}
+            className="absolute -left-6 top-4 w-[220px] opacity-45 rounded-xl overflow-hidden shadow-xl border border-white/10 max-h-36"
+            style={{ transform: "rotate(-4deg)" }}
           >
             <BarberMockup />
           </div>
 
-          {/* Right — gym */}
+          {/* Right — gym (landscape crop) */}
           <div
-            className="absolute -right-12 top-2 w-[200px] opacity-50 rounded-xl overflow-hidden shadow-xl border border-white/10"
-            style={{ transform: "rotate(6deg)" }}
+            className="absolute -right-6 top-4 w-[220px] opacity-45 rounded-xl overflow-hidden shadow-xl border border-white/10 max-h-36"
+            style={{ transform: "rotate(4deg)" }}
           >
             <GymMockup />
           </div>
 
-          {/* Center — café (cropped) */}
-          <div className="relative z-10 mx-auto w-[260px] rounded-xl overflow-hidden max-h-72 glow-orange">
+          {/* Center — café (landscape crop, wider) */}
+          <div className="relative z-10 mx-auto w-[320px] rounded-xl overflow-hidden max-h-48 glow-orange">
             <CafeMockup className="w-full" />
           </div>
         </div>

@@ -95,10 +95,10 @@ export default function Hero() {
             >
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 mt-6 lg:mt-10 bg-[#F97316] hover:bg-[#EA580C] text-white font-semibold text-lg px-8 py-4 rounded-full transition-all hover:gap-3 shadow-lg shadow-[#F97316]/20"
+                className="inline-flex items-center justify-center gap-2 mt-6 lg:mt-10 bg-[#F97316] hover:bg-[#EA580C] text-white font-semibold text-base sm:text-lg px-6 sm:px-8 py-3.5 sm:py-4 rounded-full transition-all hover:gap-3 shadow-lg shadow-[#F97316]/20 w-full sm:w-auto"
               >
                 Voir à quoi ressemblerait votre site
-                <ArrowRight size={20} />
+                <ArrowRight size={18} />
               </a>
               <p className="mt-4 text-sm text-zinc-500">
                 Gratuit &middot; Sans engagement &middot; Réponse en 48h

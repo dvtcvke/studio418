@@ -2,7 +2,7 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function Problem() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 sm:py-24 bg-white">
       <div className="max-w-3xl mx-auto px-6">
         <AnimatedSection className="text-center">
           <span className="text-sm font-semibold text-[#F97316] uppercase tracking-widest">

@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 
 export default function CTAFinal() {
   return (
-    <section id="contact" className="py-24 bg-[#09090B] bg-grain">
+    <section id="contact" className="py-16 sm:py-24 bg-[#09090B] bg-grain">
       <div className="max-w-5xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: copy */}
@@ -42,7 +42,7 @@ export default function CTAFinal() {
 
           {/* Right: form */}
           <AnimatedSection delay={200}>
-            <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 sm:p-10">
+            <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 sm:p-10">
               <ContactForm />
             </div>
           </AnimatedSection>

@@ -34,7 +34,7 @@ const advantages = [
 
 export default function WhyUs() {
   return (
-    <section id="why" className="py-24 bg-white">
+    <section id="why" className="py-16 sm:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <AnimatedSection className="text-center mb-16">
           <span className="text-sm font-semibold text-[#F97316] uppercase tracking-widest">
@@ -51,7 +51,7 @@ export default function WhyUs() {
 
         {/* Bento grid — asymmetric layout */}
         <AnimatedSection delay={200}>
-          <div className="grid sm:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-3 gap-4 sm:gap-5">
             {/* Card 1 — large, spans 2 cols */}
             <BentoCard item={advantages[0]} className="sm:col-span-2" />
 

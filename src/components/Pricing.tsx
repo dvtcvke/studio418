@@ -3,7 +3,7 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-[#FAFAF9]">
+    <section id="pricing" className="py-16 sm:py-24 bg-[#FAFAF9]">
       <div className="max-w-3xl mx-auto px-6">
         <AnimatedSection className="text-center mb-16">
           <span className="text-sm font-semibold text-[#F97316] uppercase tracking-widest">
@@ -16,7 +16,7 @@ export default function Pricing() {
 
         {/* Main offer — Creation */}
         <AnimatedSection delay={200}>
-          <div className="relative bg-[#09090B] text-white rounded-2xl p-8 sm:p-10 shadow-2xl shadow-[#F97316]/10 border-2 border-[#F97316]/30">
+          <div className="relative bg-[#09090B] text-white rounded-2xl p-6 sm:p-10 shadow-2xl shadow-[#F97316]/10 border-2 border-[#F97316]/30">
             <span className="absolute -top-3 left-8 bg-[#F97316] text-white text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full">
               Le plus demandé
             </span>
@@ -26,10 +26,10 @@ export default function Pricing() {
             </h3>
 
             <div className="mt-4 flex items-baseline gap-2">
-              <span className="text-5xl sm:text-6xl font-bold tracking-tight text-white">
+              <span className="text-4xl sm:text-6xl font-bold tracking-tight text-white">
                 2&nbsp;000&nbsp;$
               </span>
-              <span className="text-lg text-zinc-400">paiement unique</span>
+              <span className="text-base sm:text-lg text-zinc-400">paiement unique</span>
             </div>
 
             <p className="mt-3 text-zinc-400">

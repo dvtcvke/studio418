@@ -3,7 +3,7 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function Process() {
   return (
-    <section id="process" className="py-24 bg-[#09090B] bg-grain">
+    <section id="process" className="py-16 sm:py-24 bg-[#09090B] bg-grain">
       <div className="max-w-6xl mx-auto px-6">
         <AnimatedSection className="text-center mb-16">
           <span className="text-sm font-semibold text-[#F97316] uppercase tracking-widest">
@@ -14,11 +14,11 @@ export default function Process() {
           </h2>
         </AnimatedSection>
 
-        <AnimatedSection className="grid md:grid-cols-3 gap-8" delay={200}>
+        <AnimatedSection className="grid md:grid-cols-3 gap-4 sm:gap-8" delay={200}>
           {processSteps.map((step) => (
             <div
               key={step.number}
-              className="group relative bg-[#18181B] rounded-2xl p-8 border border-white/5 overflow-hidden transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40"
+              className="group relative bg-[#18181B] rounded-2xl p-6 sm:p-8 border border-white/5 overflow-hidden transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40"
             >
               {/* Massive background number */}
               <span

@@ -19,7 +19,7 @@ const audiences = [
 
 export default function TargetAudience() {
   return (
-    <section className="py-24 bg-[#09090B] bg-grain">
+    <section className="py-16 sm:py-24 bg-[#09090B] bg-grain">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <AnimatedSection>
           <span className="text-sm font-semibold text-[#F97316] uppercase tracking-widest">
@@ -38,7 +38,7 @@ export default function TargetAudience() {
           {audiences.map(({ icon: Icon, label }) => (
             <div
               key={label}
-              className="group relative bg-[#18181B] rounded-2xl p-6 text-center transition-all duration-500 ease-out hover:bg-[#1F1F23] hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40 cursor-default"
+              className="group relative bg-[#18181B] rounded-2xl p-4 sm:p-6 text-center transition-all duration-500 ease-out hover:bg-[#1F1F23] hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40 cursor-default"
             >
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#F97316]/10 mb-4 transition-transform duration-500 ease-out group-hover:scale-110">
                 <Icon
