@@ -621,10 +621,10 @@ export default function MockupShowcase({ compact = false }: { compact?: boolean 
             return (
               <div
                 key={i}
-                className="absolute top-1/2 w-[360px] rounded-xl overflow-hidden shadow-xl border border-white/10 max-h-52"
+                className="absolute top-1/2 w-[360px] h-[200px] rounded-xl overflow-hidden shadow-xl border border-white/10"
                 style={{
                   ...pos,
-                  marginTop: "-104px",
+                  marginTop: "-100px",
                   transition: "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)",
                 }}
               >
@@ -695,7 +695,7 @@ export default function MockupShowcase({ compact = false }: { compact?: boolean 
         return (
           <div
             key={i}
-            className={`absolute top-1/2 left-1/2 w-full rounded-xl overflow-hidden shadow-2xl border border-white/10 ${
+            className={`absolute top-1/2 left-1/2 w-full h-[420px] rounded-xl overflow-hidden shadow-2xl border border-white/10 ${
               isActive ? "glow-orange" : ""
             }`}
             style={{
