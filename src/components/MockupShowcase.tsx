@@ -397,10 +397,10 @@ export default function MockupShowcase({ compact = false }: { compact?: boolean 
         style={{
           opacity: mounted ? 1 : 0,
           transition: "opacity 0.8s ease 0.5s",
-          height: "160px",
+          height: "200px",
         }}
       >
-        <div className="absolute left-1/2 top-1/2" style={{ transform: "translate(-50%, -50%) scale(0.38)", width: "520px" }}>
+        <div className="absolute left-1/2 top-1/2" style={{ transform: "translate(-50%, -50%) scale(0.52)", width: "520px" }}>
           {/* Left — barbershop (landscape crop) */}
           <div
             className="absolute -left-6 top-4 w-[220px] opacity-45 rounded-xl overflow-hidden shadow-xl border border-white/10 max-h-36"
