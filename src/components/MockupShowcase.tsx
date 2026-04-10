@@ -384,13 +384,61 @@ function GymMockup() {
 
 export default function MockupShowcase({ compact = false }: { compact?: boolean }) {
   const [mounted, setMounted] = useState(false);
+  const [active, setActive] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => setMounted(true), 300);
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    if (!compact) return;
+    const interval = setInterval(() => {
+      setActive((prev) => (prev + 1) % 3);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [compact]);
+
   if (compact) {
+    // Positions: 0=center, 1=right, 2=left
+    const getPosition = (index: number) => {
+      const pos = (index - active + 3) % 3;
+      if (pos === 0) {
+        // Center — front
+        return {
+          zIndex: 10,
+          transform: "translateX(-50%) scale(1)",
+          opacity: 1,
+          left: "50%",
+          filter: "none",
+        };
+      } else if (pos === 1) {
+        // Right — behind
+        return {
+          zIndex: 5,
+          transform: "translateX(-30%) scale(0.75) rotate(4deg)",
+          opacity: 0.35,
+          left: "50%",
+          filter: "blur(0.5px)",
+        };
+      } else {
+        // Left — behind
+        return {
+          zIndex: 5,
+          transform: "translateX(-70%) scale(0.75) rotate(-4deg)",
+          opacity: 0.35,
+          left: "50%",
+          filter: "blur(0.5px)",
+        };
+      }
+    };
+
+    const mockups = [
+      <CafeMockup key="cafe" className="w-full" />,
+      <BarberMockup key="barber" />,
+      <GymMockup key="gym" />,
+    ];
+
     return (
       <div
         className="relative w-full"
@@ -400,27 +448,23 @@ export default function MockupShowcase({ compact = false }: { compact?: boolean 
           height: "220px",
         }}
       >
-        <div className="absolute left-1/2 top-1/2" style={{ transform: "translate(-50%, -50%) scale(0.62)", width: "520px" }}>
-          {/* Left — barbershop (landscape crop) */}
-          <div
-            className="absolute -left-4 top-6 w-[190px] opacity-35 rounded-xl overflow-hidden shadow-xl border border-white/10 max-h-32"
-            style={{ transform: "rotate(-4deg)" }}
-          >
-            <BarberMockup />
-          </div>
-
-          {/* Right — gym (landscape crop) */}
-          <div
-            className="absolute -right-4 top-6 w-[190px] opacity-35 rounded-xl overflow-hidden shadow-xl border border-white/10 max-h-32"
-            style={{ transform: "rotate(4deg)" }}
-          >
-            <GymMockup />
-          </div>
-
-          {/* Center — café (wider, dominant) */}
-          <div className="relative z-10 mx-auto w-[360px] rounded-xl overflow-hidden max-h-52 glow-orange">
-            <CafeMockup className="w-full" />
-          </div>
+        <div className="absolute inset-0" style={{ transform: "scale(0.62)", transformOrigin: "center center" }}>
+          {mockups.map((mockup, i) => {
+            const pos = getPosition(i);
+            return (
+              <div
+                key={i}
+                className="absolute top-1/2 w-[360px] rounded-xl overflow-hidden shadow-xl border border-white/10 max-h-52"
+                style={{
+                  ...pos,
+                  marginTop: "-104px",
+                  transition: "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)",
+                }}
+              >
+                {mockup}
+              </div>
+            );
+          })}
         </div>
       </div>
     );
