@@ -39,7 +39,7 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-0.5 text-xl font-bold tracking-tight">
+        <a href="/" className="flex items-center gap-0.5 text-xl font-bold tracking-tight">
           <span className={darkHeader ? "text-white" : "text-zinc-900"}>
             Studio
           </span>

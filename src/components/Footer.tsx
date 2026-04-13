@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <a href="#" className="text-xl font-bold tracking-tight">
+          <a href="/" className="text-xl font-bold tracking-tight">
             <span className="text-white">Studio</span>
             <span className="text-[#F97316]">418</span>
           </a>
