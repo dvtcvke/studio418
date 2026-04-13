@@ -134,6 +134,26 @@ export default function ContactForm() {
         />
       </div>
 
+      {/* Consent checkbox */}
+      <div className="flex items-start gap-3">
+        <input
+          type="checkbox"
+          id="consent"
+          name="consent"
+          required
+          className="mt-1 w-4 h-4 rounded border-white/20 bg-white/5 accent-[#F97316] shrink-0"
+        />
+        <label htmlFor="consent" className="text-xs text-zinc-400 leading-relaxed">
+          J&rsquo;accepte que mes informations soient utilisées pour
+          l&rsquo;envoi de ma maquette gratuite et le suivi de ma demande,
+          conformément à la{" "}
+          <a href="/confidentialite" className="text-[#F97316] hover:underline">
+            politique de confidentialité
+          </a>
+          . <span className="text-[#F97316]">*</span>
+        </label>
+      </div>
+
       {/* Error */}
       {status === "error" && (
         <p className="text-red-400 text-sm">{errorMsg}</p>

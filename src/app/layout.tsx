@@ -11,7 +11,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://studio418.ca"),
+  metadataBase: new URL("https://studio418.co"),
   title: {
     default: "Studio 418 — Sites web modernes pour commerces de Québec",
     template: "%s | Studio 418",
@@ -58,7 +58,7 @@ export default function RootLayout({
     name: "Studio 418",
     description:
       "Agence web spécialisée dans la création de sites web modernes pour les PME et commerces de la grande région de Québec.",
-    url: "https://studio418.ca",
+    url: "https://studio418.co",
     areaServed: {
       "@type": "City",
       name: "Québec",

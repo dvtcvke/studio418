@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://studio418.ca/sitemap.xml",
+    sitemap: "https://studio418.co/sitemap.xml",
   };
 }

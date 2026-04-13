@@ -29,11 +29,11 @@ export default function Pricing() {
               <span className="text-4xl sm:text-6xl font-bold tracking-tight text-white">
                 2&nbsp;000&nbsp;$
               </span>
-              <span className="text-base sm:text-lg text-zinc-400">paiement unique</span>
+              <span className="text-base sm:text-lg text-zinc-400">+ taxes</span>
             </div>
 
             <p className="mt-3 text-zinc-400">
-              Votre nouveau site web clé en main, prêt à convertir.
+              Paiement unique. Votre site web clé en main, prêt à convertir.
             </p>
 
             <div className="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-4">
@@ -84,7 +84,7 @@ export default function Pricing() {
                   <span className="text-3xl font-bold text-zinc-900">
                     99&nbsp;$
                   </span>
-                  <span className="text-zinc-500">/ mois</span>
+                  <span className="text-zinc-500">/ mois + taxes</span>
                 </div>
               </div>
             </div>
