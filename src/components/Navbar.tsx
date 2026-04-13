@@ -1,12 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/data/site";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const darkHeader = isHome && !scrolled;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -28,15 +32,15 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-zinc-200/50"
-          : "bg-transparent"
+        darkHeader
+          ? "bg-transparent"
+          : "bg-white/90 backdrop-blur-md shadow-sm border-b border-zinc-200/50"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-0.5 text-xl font-bold tracking-tight">
-          <span className={scrolled ? "text-zinc-900" : "text-white"}>
+          <span className={darkHeader ? "text-white" : "text-zinc-900"}>
             Studio
           </span>
           <span className="text-[#F97316]">418</span>
@@ -49,7 +53,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className={`text-sm font-medium transition-colors hover:text-[#F97316] ${
-                scrolled ? "text-zinc-600" : "text-zinc-300"
+                darkHeader ? "text-zinc-300" : "text-zinc-600"
               }`}
             >
               {link.label}
@@ -67,7 +71,7 @@ export default function Navbar() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className={`md:hidden p-2 rounded-lg transition-colors ${
-            scrolled ? "text-zinc-900 hover:bg-zinc-100" : "text-white hover:bg-white/10"
+            darkHeader ? "text-white hover:bg-white/10" : "text-zinc-900 hover:bg-zinc-100"
           }`}
           aria-label="Menu"
         >
