@@ -38,7 +38,7 @@ export default function MentionsLegales() {
                 88101, États-Unis
               </li>
               <li>
-                <strong>Courriel :</strong> info@studio418.co
+                <strong>Courriel :</strong> contact@studio418.co
               </li>
               <li>
                 <strong>Nom commercial :</strong> Studio 418

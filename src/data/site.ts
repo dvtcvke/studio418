@@ -1,7 +1,7 @@
 export const siteData = {
   name: "Studio 418",
   tagline: "Zéro Bullshit, Zéro Stress",
-  email: "info@studio418.ca",
+  email: "contact@studio418.co",
   domain: "studio418.ca",
   description:
     "Studio 418 crée des sites web au design percutant, optimisés pour Google et ultra-rapides pour les entreprises de Québec.",

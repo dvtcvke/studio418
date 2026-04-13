@@ -34,7 +34,7 @@ export default function Confidentialite() {
               renseignements personnels collectés via le site studio418.co.
             </p>
             <p className="mt-2">
-              <strong>Courriel :</strong> info@studio418.co
+              <strong>Courriel :</strong> contact@studio418.co
             </p>
           </div>
 
@@ -141,7 +141,7 @@ export default function Confidentialite() {
             </ul>
             <p className="mt-3">
               Pour exercer ces droits, contactez-nous à{" "}
-              <strong>info@studio418.co</strong>.
+              <strong>contact@studio418.co</strong>.
             </p>
           </div>
 
@@ -179,7 +179,7 @@ export default function Confidentialite() {
             <p className="mt-2">
               <strong>Digital Edge Labs LLC</strong>
               <br />
-              info@studio418.co
+              contact@studio418.co
             </p>
           </div>
         </div>

@@ -194,7 +194,7 @@ export default function Conditions() {
             <p className="mt-2">
               <strong>Digital Edge Labs LLC</strong>
               <br />
-              info@studio418.co
+              contact@studio418.co
             </p>
           </div>
         </div>
