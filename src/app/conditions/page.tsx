@@ -176,9 +176,11 @@ export default function Conditions() {
               10. Droit applicable
             </h2>
             <p>
-              Les présentes conditions sont régies par les lois en vigueur dans
-              la province de Québec, Canada. Tout litige sera soumis à la
-              juridiction compétente de la ville de Québec.
+              Les présentes conditions sont régies par les lois de l&rsquo;État
+              du Nouveau-Mexique, États-Unis. Pour les consommateurs résidant
+              au Québec, les dispositions impératives de la Loi sur la
+              protection du consommateur du Québec et de la Loi 25 sur la
+              protection des renseignements personnels s&rsquo;appliquent.
             </p>
           </div>
 

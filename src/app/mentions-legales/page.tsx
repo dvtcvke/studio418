@@ -86,9 +86,11 @@ export default function MentionsLegales() {
               Droit applicable
             </h2>
             <p>
-              Le présent site et ses mentions légales sont régis par les lois en
-              vigueur au Canada et dans la province de Québec. Tout litige sera
-              soumis à la juridiction compétente de la ville de Québec.
+              Le présent site et ses mentions légales sont régis par les lois
+              de l&rsquo;État du Nouveau-Mexique, États-Unis. Pour les
+              consommateurs résidant au Québec, les dispositions impératives
+              de la Loi sur la protection du consommateur du Québec
+              s&rsquo;appliquent.
             </p>
           </div>
 
