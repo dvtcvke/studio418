@@ -107,7 +107,7 @@ export default function ContactForm() {
           <span className="text-zinc-500">(optionnel)</span>
         </label>
         <input
-          type="url"
+          type="text"
           id="url"
           name="url"
           placeholder="https://www.votresite.ca"
