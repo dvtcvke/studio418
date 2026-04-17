@@ -23,15 +23,15 @@ export const processSteps = [
   },
   {
     number: "02",
-    title: "On crée votre maquette (gratuitement)",
+    title: "On pré-construit votre site (gratuitement)",
     description:
-      "En 48h, nous vous présentons une maquette sur-mesure au design soigné, optimisée pour séduire votre clientèle locale et capter l\u2019attention.",
+      "En 48h, nous vous envoyons un lien privé vers un aperçu interactif sur-mesure. Vous pouvez naviguer dessus comme si le site était déjà en ligne, pour voir exactement comment il captera l\u2019attention de vos clients.",
   },
   {
     number: "03",
     title: "Vous décidez",
     description:
-      "La maquette vous plaît\u00a0? On met le site en ligne. Sinon, vous repartez avec le visuel, sans frais, sans pression.",
+      "Le résultat vous plaît\u00a0? On finalise et on met le site en ligne. Sinon, on en reste là, sans frais, sans pression.",
   },
 ];
 

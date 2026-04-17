@@ -23,7 +23,7 @@ export default function FloatingCTA() {
         href="#contact"
         className="bg-[#F97316] hover:bg-[#EA580C] text-white font-semibold text-sm px-5 py-3 rounded-full shadow-lg shadow-[#F97316]/25 transition-all hover:shadow-xl hover:shadow-[#F97316]/30"
       >
-        Ma maquette gratuite
+        Mon aperçu gratuit
       </a>
     </div>
   );

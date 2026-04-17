@@ -59,7 +59,7 @@ export default function Pricing() {
               href="#contact"
               className="mt-10 block text-center font-semibold py-4 rounded-full bg-[#F97316] hover:bg-[#EA580C] text-white transition-all text-lg"
             >
-              Demander ma maquette gratuite
+              Demander mon aperçu gratuit
             </a>
           </div>
         </AnimatedSection>

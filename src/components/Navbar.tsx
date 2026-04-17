@@ -63,7 +63,7 @@ export default function Navbar() {
             href="#contact"
             className="text-sm font-semibold bg-[#F97316] hover:bg-[#EA580C] text-white px-5 py-2 rounded-full transition-colors"
           >
-            Ma maquette gratuite
+            Mon aperçu gratuit
           </a>
         </div>
 
@@ -103,7 +103,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(false)}
             className="mt-4 text-center text-base font-semibold bg-[#F97316] hover:bg-[#EA580C] text-white px-6 py-3 rounded-full transition-colors"
           >
-            Ma maquette gratuite
+            Mon aperçu gratuit
           </a>
         </div>
       </div>

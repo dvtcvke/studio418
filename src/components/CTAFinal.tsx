@@ -16,8 +16,8 @@ export default function CTAFinal() {
             </h2>
             <p className="mt-6 text-lg text-zinc-400 leading-relaxed">
               Entrez l&rsquo;adresse de votre site actuel (ou de votre page
-              Facebook si vous n&rsquo;avez pas de site). On vous envoie une
-              maquette gratuite en 48h.
+              Facebook si vous n&rsquo;avez pas de site). On pré-construit
+              votre futur site et on vous envoie un aperçu interactif en 48h.
             </p>
             <p className="mt-4 text-lg text-zinc-400">
               Zéro appel. Zéro obligation.
@@ -27,7 +27,7 @@ export default function CTAFinal() {
             <div className="mt-10 flex flex-wrap gap-4">
               <div className="flex items-center gap-2 text-sm text-zinc-500">
                 <span className="w-2 h-2 rounded-full bg-green-500" />
-                Maquette en 48h
+                Lien privé en 48h
               </div>
               <div className="flex items-center gap-2 text-sm text-zinc-500">
                 <span className="w-2 h-2 rounded-full bg-green-500" />

@@ -145,7 +145,7 @@ export default function ContactForm() {
         />
         <label htmlFor="consent" className="text-xs text-zinc-400 leading-relaxed">
           J&rsquo;accepte que mes informations soient utilisées pour
-          l&rsquo;envoi de ma maquette gratuite et le suivi de ma demande,
+          l&rsquo;envoi de mon aperçu gratuit et le suivi de ma demande,
           conformément à la{" "}
           <a href="/confidentialite" className="text-[#F97316] hover:underline">
             politique de confidentialité
@@ -172,7 +172,7 @@ export default function ContactForm() {
           </>
         ) : (
           <>
-            Recevoir ma maquette gratuite
+            Recevoir mon aperçu gratuit
             <Send size={18} />
           </>
         )}
