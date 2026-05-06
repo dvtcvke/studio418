@@ -25,11 +25,13 @@ export default function Pricing() {
               Création ou Refonte de site web
             </h3>
 
-            <div className="mt-4 flex items-baseline gap-2">
+            <div className="mt-4 flex items-baseline gap-3 flex-wrap">
               <span className="text-4xl sm:text-6xl font-bold tracking-tight text-white">
                 2&nbsp;000&nbsp;$
               </span>
-              <span className="text-base sm:text-lg text-zinc-400">+ taxes</span>
+              <span className="text-base sm:text-lg text-zinc-500 line-through">
+                5&nbsp;000&nbsp;$ en agence
+              </span>
             </div>
 
             <p className="mt-3 text-zinc-400">
@@ -69,11 +71,11 @@ export default function Pricing() {
           <div className="mt-6 bg-white rounded-2xl border border-zinc-200 p-6 sm:p-8">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-5">
               <div>
-                <p className="text-sm font-semibold text-[#64748B] uppercase tracking-wider">
-                  Après la mise en ligne
+                <p className="text-sm font-semibold text-[#F97316] uppercase tracking-wider">
+                  Inclus avec votre site &middot; requis pour rester en ligne
                 </p>
                 <h3 className="mt-1 text-xl font-bold text-zinc-900">
-                  Conciergerie & Performance
+                  Conciergerie &amp; Hébergement
                 </h3>
               </div>
               <div className="shrink-0 sm:text-right">
@@ -84,7 +86,7 @@ export default function Pricing() {
                   <span className="text-3xl font-bold text-zinc-900">
                     99&nbsp;$
                   </span>
-                  <span className="text-zinc-500">/ mois + taxes</span>
+                  <span className="text-zinc-500">/ mois</span>
                 </div>
               </div>
             </div>
@@ -132,8 +134,10 @@ export default function Pricing() {
               ))}
             </div>
 
-            <p className="mt-5 text-xs text-zinc-400 text-center">
-              Aucun contrat à long terme &middot; Annulez quand vous voulez
+            <p className="mt-5 text-xs text-zinc-500 text-center leading-relaxed">
+              L&rsquo;hébergement est ce qui garde votre site accessible sur
+              internet. Inclus dès la mise en ligne &middot; sans contrat
+              long terme.
             </p>
           </div>
         </AnimatedSection>

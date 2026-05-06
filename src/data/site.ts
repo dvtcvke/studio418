@@ -88,16 +88,17 @@ export const pricingPlans = [
     highlighted: true,
   },
   {
-    name: "Conciergerie & Performance",
+    name: "Conciergerie & Hébergement",
     price: "99\u00a0$",
     period: "/ mois",
-    description: "On gère tout. Vous ne touchez à rien.",
+    description:
+      "Inclus avec votre site, requis pour rester en ligne. On gère tout.",
     features: [
       "Hébergement ultra-rapide",
       "Certificat de sécurité SSL",
       "Surveillance technique invisible",
       "1 modification incluse par mois",
-      "Aucun contrat à long terme",
+      "Sans contrat long terme",
     ],
     highlighted: false,
   },
